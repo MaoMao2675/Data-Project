@@ -7,7 +7,7 @@ import hashlib
 # initialize Faker
 fake = Faker()
 
-num_records = 100
+num_records = 1000000
 
 # generate SSN set first for unique records then conver to list
 ssns = set()
