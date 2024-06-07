@@ -85,5 +85,4 @@ for i in range(1000):
     bucket_df.to_parquet(f'Bucket_{i}.parquet')
 
 
-# verify file
-# df_loaded = pd.read_parquet()
+
