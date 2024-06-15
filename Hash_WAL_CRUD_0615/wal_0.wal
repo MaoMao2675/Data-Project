@@ -1,0 +1,32 @@
+{"timestamp": "2024-06-15T14:20:25.708186", "operation": "end_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:20:48.426215", "operation": "start_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:20:48.426404", "operation": "create", "data": {"SSN": "124-45-6789", "State": "CA", "Occupation": "Engineer"}}
+{"timestamp": "2024-06-15T14:20:48.431729", "operation": "create", "data": {"SSN": "987-65-4321", "State": "TX", "Occupation": "Doctor"}}
+{"timestamp": "2024-06-15T14:20:48.436124", "operation": "update", "data": {"SSN": "124-45-6789", "old_data": {"SSN": null, "State": "CA", "Occupation": "Engineer"}, "new_data": {"SSN": null, "State": "CA", "Occupation": "Senior Engineer"}}}
+{"timestamp": "2024-06-15T14:20:48.437916", "operation": "end_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:21:38.499051", "operation": "start_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:21:38.499226", "operation": "create", "data": {"SSN": "124-45-6789", "State": "CA", "Occupation": "Engineer"}}
+{"timestamp": "2024-06-15T14:21:38.500812", "operation": "create", "data": {"SSN": "987-65-4321", "State": "TX", "Occupation": "Doctor"}}
+{"timestamp": "2024-06-15T14:21:38.502595", "operation": "update", "data": {"SSN": "124-45-6789", "old_data": {"SSN": null, "State": "CA", "Occupation": "Engineer"}, "new_data": {"SSN": null, "State": "CA", "Occupation": "Senior Engineer"}}}
+{"timestamp": "2024-06-15T14:21:38.504821", "operation": "end_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:22:01.212721", "operation": "start_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:22:01.212895", "operation": "create", "data": {"SSN": "125-45-6789", "State": "CA", "Occupation": "Engineer"}}
+{"timestamp": "2024-06-15T14:22:01.218271", "operation": "create", "data": {"SSN": "987-65-4321", "State": "TX", "Occupation": "Doctor"}}
+{"timestamp": "2024-06-15T14:22:01.219188", "operation": "end_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:22:14.892512", "operation": "start_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:22:14.892689", "operation": "create", "data": {"SSN": "125-45-6789", "State": "CA", "Occupation": "Engineer"}}
+{"timestamp": "2024-06-15T14:22:14.894273", "operation": "create", "data": {"SSN": "989-65-4321", "State": "TX", "Occupation": "Doctor"}}
+{"timestamp": "2024-06-15T14:22:14.898538", "operation": "end_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:22:25.371476", "operation": "end_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:22:30.475883", "operation": "start_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:22:30.476060", "operation": "create", "data": {"SSN": "126-45-6789", "State": "CA", "Occupation": "Engineer"}}
+{"timestamp": "2024-06-15T14:22:30.481146", "operation": "create", "data": {"SSN": "986-65-4321", "State": "TX", "Occupation": "Doctor"}}
+{"timestamp": "2024-06-15T14:22:30.485582", "operation": "end_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:26:01.598521", "operation": "update", "data": {"SSN": "126-45-6789", "old_data": {"SSN": null, "State": "CA", "Occupation": "Engineer"}, "new_data": {"SSN": null, "State": "CA", "Occupation": "Dentist"}}}
+{"timestamp": "2024-06-15T14:26:51.904813", "operation": "update", "data": {"SSN": "126-45-6789", "old_data": {"SSN": null, "State": "CA", "Occupation": "Engineer"}, "new_data": {"SSN": null, "State": "CA", "Occupation": "Dentist"}}}
+{"timestamp": "2024-06-15T14:29:21.380877", "operation": "start_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:29:21.381909", "operation": "create", "data": {"SSN": "126-45-6789", "State": "CA", "Occupation": "Engineer"}}
+{"timestamp": "2024-06-15T14:29:21.383656", "operation": "create", "data": {"SSN": "986-65-4321", "State": "TX", "Occupation": "Doctor"}}
+{"timestamp": "2024-06-15T14:29:21.384974", "operation": "end_transaction", "data": {}}
+{"timestamp": "2024-06-15T14:29:21.387394", "operation": "update", "data": {"SSN": "126-45-6789", "old_data": {"SSN": null, "State": "CA", "Occupation": "Engineer"}, "new_data": {"SSN": null, "State": "CA", "Occupation": "Dentist"}}}
+{"timestamp": "2024-06-15T14:30:11.400900", "operation": "delete", "data": {"SSN": null, "State": "CA", "Occupation": "Dentist"}}
