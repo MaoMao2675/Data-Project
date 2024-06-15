@@ -108,7 +108,7 @@ for ssn, row in df.iterrows():
 # Save each bucket into a Parquet file and their respective secondary indexes into JSON files
 for bucket, data in buckets.items():
     if data:
-        bucket_df = pd.DataFrame(data)
+        bucket_df = pd.DataFrame(data).sort_index()
         bucket_df.index.name = 'SSN'
         bucket_df.to_parquet(os.path.join(BUCKETS_DIR, f'bucket_{bucket}.parquet'), index=True)
 
