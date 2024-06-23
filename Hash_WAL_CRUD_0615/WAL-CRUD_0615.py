@@ -190,9 +190,9 @@ def read_record(ssn):
     if os.path.exists(bucket_file_path):
         bucket_df = pd.read_parquet(bucket_file_path)
         if ssn in bucket_df.index:
-            return bucket_df.loc[ssn].to_dict()
-            record['SSN'] = ssn # ensure SSN is included in the returned record
-            
+            record = bucket_df.loc[ssn].to_dict()
+            record['SSN'] = ssn  # Ensure SSN is included in the returned record
+            return record
 
     print(f"Record with SSN {ssn} not found.")
     return None
@@ -225,7 +225,8 @@ def update_record(ssn, updates, rollback=False):
                 if 'State' in updates:
                     update_secondary_index(state_index_file_path, new_record, 'State', old_value=old_record['State'])
                 if 'Occupation' in updates:
-                    update_secondary_index(occupation_index_file_path, new_record, 'Occupation', old_value=old_record['Occupation'])
+                    update_secondary_index(occupation_index_file_path, new_record, 'Occupation',
+                                           old_value=old_record['Occupation'])
             else:
                 print(f"Record with SSN {ssn} not found.")
         else:
@@ -277,8 +278,8 @@ def initialize_system():
 
 try:
     start_transaction()
-    create_record({'SSN': '126-45-6789', 'State': 'CA', 'Occupation': 'Engineer'})
-    create_record({'SSN': '986-65-4321', 'State': 'TX', 'Occupation': 'Doctor'})
+    create_record({'SSN': '888-45-6789', 'State': 'CA', 'Occupation': 'Engineer'})
+
 
     end_transaction()
 
@@ -288,11 +289,9 @@ except Exception as e:
         rollback_transaction(entry)
     clear_wal()
 
-print(read_record('126-45-6789'))
-print(read_record('986-65-4321'))
+print(read_record('888-45-6789'))
 
-update_record('126-45-6789', {'Occupation': 'Dentist'}, rollback=False)
-print(read_record('126-45-6789'))
 
-delete_record('126-45-6789')
-print(read_record('126-45-6789'))
+update_record('888-45-6789', {'Occupation': 'Dentist'}, rollback=False)
+print(read_record('888-45-6789'))
+
