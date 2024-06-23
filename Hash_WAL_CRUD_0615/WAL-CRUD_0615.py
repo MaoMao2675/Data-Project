@@ -191,6 +191,8 @@ def read_record(ssn):
         bucket_df = pd.read_parquet(bucket_file_path)
         if ssn in bucket_df.index:
             return bucket_df.loc[ssn].to_dict()
+            record['SSN'] = ssn # ensure SSN is included in the returned record
+            
 
     print(f"Record with SSN {ssn} not found.")
     return None
