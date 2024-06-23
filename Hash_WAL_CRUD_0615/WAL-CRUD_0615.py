@@ -208,11 +208,11 @@ def update_record(ssn, updates, rollback=False):
         if os.path.exists(bucket_file_path):
             bucket_df = pd.read_parquet(bucket_file_path)
             if ssn in bucket_df.index:
-                old_record = bucket_df.loc[ssn].to_dict()
+                old_record = bucket_df.loc[ssn].to_dict()   # get the old value
                 new_record = {**old_record, **updates}
 
                 if not rollback:
-                    log_operation('update', {'SSN': ssn, 'old_data': old_record, 'new_data': new_record})
+                    log_operation('update', {'SSN': ssn, 'old_data': old_record, 'new_data': new_record})   # log the old value and new value to WAL before actual updating
 
                 # Update the record in the DataFrame
                 for key, value in updates.items():
@@ -249,10 +249,10 @@ def delete_record(ssn, rollback=False):
         if os.path.exists(bucket_file_path):
             bucket_df = pd.read_parquet(bucket_file_path)
             if ssn in bucket_df.index:
-                old_record = bucket_df.loc[ssn].to_dict()
+                old_record = bucket_df.loc[ssn].to_dict()   # get the old value
 
                 if not rollback:
-                    log_operation('delete', old_record)
+                    log_operation('delete', old_record)   # log old value to WAL before actual deletion
 
                 bucket_df = bucket_df.drop(index=ssn)
                 bucket_df.to_parquet(bucket_file_path, index=True)
